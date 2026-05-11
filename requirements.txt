@@ -1,0 +1,12 @@
+pandas
+numpy
+tqdm
+PyMuPDF
+sentence-transformers
+chromadb
+rank-bm25
+scikit-learn
+pyyaml
+python-dotenv
+openai
+torch
