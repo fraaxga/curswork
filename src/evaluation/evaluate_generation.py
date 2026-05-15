@@ -22,7 +22,6 @@ def build_generation_annotation_template(
                 "retrieved_ids": generated.get("retrieved_ids", ""),
                 "correctness": "",
                 "groundedness": "",
-                "citation_accuracy": "",
                 "hallucination": "",
                 "comment": "",
             }
