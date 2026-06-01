@@ -10,13 +10,13 @@ document:
   version: "2026-02-25"
   effective_from: "2026-03-31"
 preprocessing:
-  mode: advanced
+  mode: basic
 chunking:
-  method: fixed
-  chunk_size: 800
-  chunk_overlap: 100
+  method: paragraph
+  chunk_size: 1000
+  chunk_overlap: 0
 embedding:
-  model_name: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+  model_name: intfloat/multilingual-e5-small
 vector_store:
   type: chromadb
   collection_name: popatkus_chunks
