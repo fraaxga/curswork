@@ -177,24 +177,24 @@ def main():
         top_k=top_k,
         use_bm25=True,
     )
-    all_results.append(bm25_result)
-    reranker_result = evaluate_config(
-        experiment_name="reranker_cross_encoder",
-        pages=pages,
-        qa_df=qa_df,
-        document_id=document_id,
-        source=source,
-        preprocessing_mode="basic",
-        chunk_method="paragraph",
-        chunk_size=1000,
-        chunk_overlap=0,
-        embedding_model_name="intfloat/multilingual-e5-small",
-        top_k=top_k,
-        use_reranker=True,
-        reranker_model_name="cross-encoder/ms-marco-MiniLM-L-6-v2",
-        initial_top_k=10,
-    )
-    all_results.append(reranker_result)
+    # all_results.append(bm25_result)
+    # reranker_result = evaluate_config(
+    #     experiment_name="reranker_cross_encoder",
+    #     pages=pages,
+    #     qa_df=qa_df,
+    #     document_id=document_id,
+    #     source=source,
+    #     preprocessing_mode="basic",
+    #     chunk_method="paragraph",
+    #     chunk_size=1000,
+    #     chunk_overlap=0,
+    #     embedding_model_name="intfloat/multilingual-e5-small",
+    #     top_k=top_k,
+    #     use_reranker=True,
+    #     reranker_model_name="cross-encoder/ms-marco-MiniLM-L-6-v2",
+    #     initial_top_k=10,
+    # )
+    # all_results.append(reranker_result)
     results_df = pd.DataFrame(all_results)
     output_path = results_dir / "all_retrieval_experiments.csv"
     results_df.to_csv(output_path, index=False)
