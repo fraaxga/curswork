@@ -1,8 +1,8 @@
 import os
+import asyncio
 from dotenv import load_dotenv
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters
 from src.bot.telegram_bot import TelegramBot
-
 def main() -> None:
     load_dotenv()
     token = os.getenv("TELEGRAM_BOT_TOKEN")
@@ -14,6 +14,8 @@ def main() -> None:
     app.add_handler(CommandHandler("help", bot.help))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, bot.handle_message))
     print("running")
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
     app.run_polling()
 
 if __name__ == "__main__":
