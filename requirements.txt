@@ -10,3 +10,4 @@ pyyaml
 python-dotenv
 openai
 torch
+python-telegram-bot==21.10
