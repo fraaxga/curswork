@@ -135,7 +135,7 @@ def main():
             qa_df=qa_df,
             document_id=document_id,
             source=source,
-            preprocessing_mode="advanced",
+            preprocessing_mode="basic",
             chunk_method=method,
             chunk_size=size,
             chunk_overlap=overlap,
