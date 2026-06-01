@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.env
+data/raw/*.pdf
+data/processed/*.jsonl
+data/processed/*.csv
+.chroma/
+.chroma_experiments/
+experiments/results/*.csv
+experiments/results/*.json
+experiments/results/*.jsonl
+.ipynb_checkpoints/
+.DS_Store
+.venv/
+venv/
